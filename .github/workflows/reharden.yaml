@@ -83,6 +83,7 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p precheck
+          pip install -r ../tt/precheck/requirements.txt
           python ../tt/precheck/precheck.py --gds $GDS --markdown-report
           cp -R ../tt/precheck/reports precheck/
           cat ../tt/precheck/reports/results.md | tee -a $GITHUB_STEP_SUMMARY
