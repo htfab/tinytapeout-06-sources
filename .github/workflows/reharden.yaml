@@ -75,20 +75,18 @@ jobs:
           wget https://www.klayout.org/downloads/Ubuntu-22/klayout_${KLAYOUT_VERSION}-1_amd64.deb
           sudo apt-get update
           sudo apt-get install -y ./klayout_${KLAYOUT_VERSION}-1_amd64.deb
-        env:
-          KLAYOUT_VERSION: 0.29.0
 
       - name: Run tiny tapeout prechecks
-        working-directory: ${{ matrix.project }}
+        working-directory: tt/precheck
         run: |
           set -o pipefail
-          mkdir -p precheck
-          pip install -r ../tt/precheck/requirements.txt
-          python ../tt/precheck/precheck.py --gds $GDS
-          cp -R ../tt/precheck/reports precheck/
-          cat ../tt/precheck/reports/results.md | tee -a $GITHUB_STEP_SUMMARY
+          pip install -r requirements.txt
+          python precheck.py --gds $GDS
+          cp -R reports ${PROJECT_DIR}/precheck
+          cat reports/results.md | tee -a $GITHUB_STEP_SUMMARY
         env:
-          GDS: runs/wokwi/results/final/gds/${{ matrix.project }}.gds
+          PROJECT_DIR: ${{ github.workspace }}/${{ matrix.project }}
+          GDS: ${{ github.workspace }}/${{ matrix.project }}/runs/wokwi/results/final/gds/${{ matrix.project }}.gds
 
       - name: Publish build logs
         if: failure()
