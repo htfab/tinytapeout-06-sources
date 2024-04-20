@@ -74,7 +74,6 @@ jobs:
           - tt_um_dr_skyler_clock
           - tt_um_drburke3_top
           - tt_um_drops
-          - tt_um_dvxf_dj8
           - tt_um_ejfogleman_smsdac
           - tt_um_enieman
           - tt_um_entwurf_integrierter_schaltungen_hadner
@@ -115,7 +114,6 @@ jobs:
           - tt_um_lancemitrex
           - tt_um_ledcontroller_Gatsch
           - tt_um_lipsi_schoeberl
-          - tt_um_lisa
           - tt_um_liu3hao_rv32e_min_mcu
           - tt_um_lk_ans_top
           - tt_um_loco_choco
@@ -135,9 +133,6 @@ jobs:
           - tt_um_nicklausthompson_twi_monitor
           - tt_um_noritsuna_i4004
           - tt_um_nubcore_default_tape
-          - tt_um_obriensp_be8
-          - tt_um_obriensp_be8_nomacro
-          - tt_um_oscillating_bones
           - tt_um_otp_encryptor
           - tt_um_pckys_game
           - tt_um_petersn_micro1
@@ -151,7 +146,6 @@ jobs:
           - tt_um_rng
           - tt_um_rng_3_lucaz97
           - tt_um_s1pu11i_simple_nco
-          - tt_um_sanojn_tlv2556_interface
           - tt_um_sanojn_ttrpg_dice
           - tt_um_sap_1
           - tt_um_scorbetta_goa
