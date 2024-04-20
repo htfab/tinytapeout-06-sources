@@ -1,0 +1,99 @@
+name: reharden
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  reharden:
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - tt_um_factory_test
+    runs-on: ubuntu-latest
+    env:
+      OPENLANE_TAG: 2024.04.02
+      OPENLANE_IMAGE_NAME: efabless/openlane:2024.04.02
+      OPENLANE_ROOT: /home/runner/openlane
+      PDK_ROOT: /home/runner/pdk
+      PDK: sky130A
+      # Tool versions:
+      MAGIC_VERSION: 8.3.473
+      KLAYOUT_VERSION: 0.29.0
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Checkout tt-support-tools repo
+        uses: actions/checkout@v4
+        with:
+          repository: tinytapeout/tt-support-tools
+          path: tt
+          ref: tt06
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install OpenLane
+        run: |
+          git clone --depth=1 --branch $OPENLANE_TAG https://github.com/The-OpenROAD-Project/OpenLane.git $OPENLANE_ROOT
+          cd $OPENLANE_ROOT
+          make
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Make GDS with OpenLane
+        working-directory: ${{ matrix.project }}
+        run: |
+          mkdir -p tt/def
+          cp ../tt/def/*.def tt/def/
+          docker run --rm -v $OPENLANE_ROOT:/openlane \
+              -v $PDK_ROOT:$PDK_ROOT -v $(pwd):/work -e PDK=$PDK -e PDK_ROOT=$PDK_ROOT \
+              -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME \
+              /bin/bash -c "./flow.tcl -overwrite -design /work/src -run_path /work/runs -tag wokwi"
+
+          if ! grep -q "\[SUCCESS\]: Flow complete." runs/wokwi/openlane.log; then
+            exit 1
+          fi
+
+          # Fail if issue_reproducible directory exists
+          if [ -d "runs/wokwi/issue_reproducible" ]; then
+            exit 1
+          fi
+
+      - name: Install magic-vlsi
+        run: |
+          sudo apt-get update && sudo apt-get install -y build-essential git csh libcairo2-dev tcl-dev tk-dev
+          git clone --branch ${MAGIC_VERSION} https://github.com/RTimothyEdwards/magic
+          cd magic && ./configure --with-cairo=no --disable-readline --without-x && make && sudo make install
+
+      - name: Install klayout
+        run: |
+          wget https://www.klayout.org/downloads/Ubuntu-22/klayout_${KLAYOUT_VERSION}-1_amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y ./klayout_${KLAYOUT_VERSION}-1_amd64.deb
+        env:
+          KLAYOUT_VERSION: 0.29.0
+
+      - name: Run tiny tapeout prechecks
+        working-directory: ${{ matrix.project }}
+        run: |
+          set -o pipefail
+          mkdir -p precheck
+          python ../tt/precheck/precheck.py --gds $GDS --markdown-report
+          cp -R ../tt/precheck/reports precheck/
+          cat ../tt/precheck/reports/results.md | tee -a $GITHUB_STEP_SUMMARY
+        env:
+          GDS: runs/wokwi/results/final/gds/${{ matrix.project }}.gds
+
+      - name: Publish build logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GDS_${{ matrix.project }}
+          path: |
+            ${{ matrix.project }}/runs/*
+            ${{ matrix.project }}/precheck/*
