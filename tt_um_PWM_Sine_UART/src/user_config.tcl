@@ -1,0 +1,10 @@
+set ::env(DESIGN_NAME) tt_um_PWM_Sine_UART
+set ::env(VERILOG_FILES) "\
+    $::env(DESIGN_DIR)/tt_um_PWM_Sine_UART.v \
+    $::env(DESIGN_DIR)/impl_top.v \
+    $::env(DESIGN_DIR)/uart_rx.v \
+    $::env(DESIGN_DIR)/uart_tx.v"
+
+# Project area: 1x1 tiles
+set ::env(DIE_AREA) "0 0 161.00 111.52"
+set ::env(FP_DEF_TEMPLATE) "$::env(DESIGN_DIR)/../tt/def/tt_block_1x1_pg.def"

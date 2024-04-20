@@ -4,7 +4,6 @@
 *.vcd
 runs
 tt_submission
-src/user_config.tcl
 *sim_build
 test/__pycache__/
 *results.xml
