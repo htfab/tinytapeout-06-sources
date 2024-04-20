@@ -1,0 +1,75 @@
+name: test
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install iverilog
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+
+      # Set Python up and install cocotb
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install cocotb 1.8.x
+        shell: bash
+        run: |
+          pip install cocotb~=1.8.0
+          cocotb-config --libpython
+          cocotb-config --python-bin 
+
+      - name: Install some extra packages
+        shell: bash
+        run: |
+          pip install pandas
+          pip install seaborn
+
+      - name: Set up environment variables
+        shell: bash
+        run: |
+          cat << EOF >> $GITHUB_ENV
+          PDK_ROOT=/home/runner/pdk
+          PDK=sky130A
+          EOF
+
+      - name: Install fixed simulation files
+        shell: bash
+        run: |
+          cd test
+          mkdir pdk_cleaned
+          git clone --filter=blob:none --no-checkout https://github.com/efabless/caravel_mgmt_soc_litex.git pdk_cleaned
+          cd pdk_cleaned
+          git sparse-checkout set verilog/cvc-pdk
+          git checkout
+
+      - name: Run tests - assertions check toggling and static output
+        run: |
+          cd test
+          make clean
+          make GATES=no SIM=icarus FIXED_PDK_DIR=./pdk_cleaned/verilog/cvc-pdk
+          # make will return success even if the test fails, so check for failure in the results.xml
+          ! grep failure results.xml
+
+      - name: Test Summary
+        uses: test-summary/action@v2.2
+        with:
+          paths: "test/results.xml"
+        if: always()
+
+      - name: upload vcd
+        if: success() || failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-vcd
+          path: |
+            test/tb.vcd
+            test/result.xml
+

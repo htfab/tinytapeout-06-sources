@@ -1,0 +1,13 @@
+magic
+tech sky130A
+timestamp 1713491921
+use inv_vcro  inv_vcro_0
+timestamp 1713490626
+transform 1 0 95 0 1 100
+box -100 -95 220 580
+<< labels >>
+rlabel space -5 635 5 640 7 vdd
+rlabel space 30 250 40 255 7 in
+rlabel space -5 5 5 10 7 gnd
+rlabel space 275 250 285 255 3 out
+<< end >>

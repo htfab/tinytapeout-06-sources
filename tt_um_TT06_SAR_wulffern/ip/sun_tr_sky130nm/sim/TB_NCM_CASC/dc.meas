@@ -1,0 +1,58 @@
+* Measure TB_NCM
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+let v-sweep=v(temp)
+
+let iref=i(v.xdut.vbias)
+
+let i_dlcm_1 = -i(vdlcm_1)
+meas dc tN40_i_dlcm_1 find i_dlcm_1 at=-39
+meas dc t25_i_dlcm_1 find i_dlcm_1 at=25
+meas dc t125_i_dlcm_1 find i_dlcm_1 at=124
+meas dc max_i_dlcm_1 MAX i_dlcm_1
+meas dc min_i_dlcm_1 MIN i_dlcm_1
+
+let i_dlcm2_1 = -i(vdlcm2_1)
+meas dc tN40_i_dlcm2_1 find i_dlcm2_1 at=-39
+meas dc t25_i_dlcm2_1 find i_dlcm2_1 at=25
+meas dc t125_i_dlcm2_1 find i_dlcm2_1 at=124
+meas dc max_i_dlcm2_1 MAX i_dlcm2_1
+meas dc min_i_dlcm2_1 MIN i_dlcm2_1
+
+let i_lcm_1 = -i(vlcm_1)
+meas dc tN40_i_lcm_1 find i_lcm_1 at=-39
+meas dc t25_i_lcm_1 find i_lcm_1 at=25
+meas dc t125_i_lcm_1 find i_lcm_1 at=124
+meas dc max_i_lcm_1 MAX i_lcm_1
+meas dc min_i_lcm_1 MIN i_lcm_1
+
+
+let i_dlcm_4 = -i(vdlcm_4)
+meas dc tN40_i_dlcm_4 find i_dlcm_4 at=-39
+meas dc t25_i_dlcm_4 find i_dlcm_4 at=25
+meas dc t125_i_dlcm_4 find i_dlcm_4 at=124
+meas dc max_i_dlcm_4 MAX i_dlcm_4
+meas dc min_i_dlcm_4 MIN i_dlcm_4
+
+let i_dlcm2_4 = -i(vdlcm2_4)
+meas dc tN40_i_dlcm2_4 find i_dlcm2_4 at=-39
+meas dc t25_i_dlcm2_4 find i_dlcm2_4 at=25
+meas dc t125_i_dlcm2_4 find i_dlcm2_4 at=124
+meas dc max_i_dlcm2_4 MAX i_dlcm2_4
+meas dc min_i_dlcm2_4 MIN i_dlcm2_4
+
+let i_lcm_4 = -i(vlcm_4)
+meas dc tN40_i_lcm_4 find i_lcm_4 at=-39
+meas dc t25_i_lcm_4 find i_lcm_4 at=25
+meas dc t125_i_lcm_4 find i_lcm_4 at=124
+meas dc max_i_lcm_4 MAX i_lcm_4
+meas dc min_i_lcm_4 MIN i_lcm_4
+
+write {cicname}_meas.raw
+
+echo "MEAS_END"
+.endc

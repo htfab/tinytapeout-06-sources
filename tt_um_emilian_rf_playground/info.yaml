@@ -1,0 +1,60 @@
+# Tiny Tapeout project information
+project:
+  title:        "IDAC8 based on divide current by 2"      # Project title
+  author:       "Emilian Miron"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "IDAC8 based on divide current by 2."      # One line description of what your project does
+  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1 (digital only), 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_emilian_rf_playground"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "bit0"
+  ui[1]: "bit1"
+  ui[2]: "bit2"
+  ui[3]: "bit3"
+  ui[4]: "bit4"
+  ui[5]: "bit5"
+  ui[6]: "bit6"
+  ui[7]: "bit7"
+
+  # Outputs
+  uo[0]: "n/a"
+  uo[1]: "n/a"
+  uo[2]: "n/a"
+  uo[3]: "n/a"
+  uo[4]: "n/a"
+  uo[5]: "n/a"
+  uo[6]: "n/a"
+  uo[7]: "n/a"
+
+  # Bidirectional pins
+  uio[0]: "n/a"
+  uio[1]: "n/a"
+  uio[2]: "n/a"
+  uio[3]: "n/a"
+  uio[4]: "n/a"
+  uio[5]: "n/a"
+  uio[6]: "n/a"
+  uio[7]: "n/a"
+
+  # Analog pins - you can add more if you use them, up to 6.
+  # Keep only the "ua" pins you are actually using, and *delete* any unused "ua" pins.
+  # The first pins is always ua[0], and the pin numbers must be sequential.
+  ua[0]: "VREF_OUT for current level/256"
+  ua[1]: "IOUT - output current"
+  ua[2]: "VREF_IN for current level"
+
+# Do not change!
+yaml_version: 6

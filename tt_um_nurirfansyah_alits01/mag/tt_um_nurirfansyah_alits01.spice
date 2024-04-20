@@ -1,0 +1,45 @@
+* NGSPICE file created from tt_um_nurirfansyah_alits01.ext - technology: sky130A
+
+.subckt inv_vcro in vdd out gnd
+X0 out in gnd gnd sky130_fd_pr__nfet_01v8 ad=0.2 pd=1.4 as=0.35 ps=2.7 w=1 l=0.5
+X1 out in vdd vdd sky130_fd_pr__pfet_01v8 ad=0.4 pd=2.4 as=0.7 ps=4.7 w=2 l=0.5
+X2 gnd in out gnd sky130_fd_pr__nfet_01v8 ad=0.35 pd=2.7 as=0.2 ps=1.4 w=1 l=0.5
+X3 vdd in out vdd sky130_fd_pr__pfet_01v8 ad=0.7 pd=4.7 as=0.4 ps=2.4 w=2 l=0.5
+.ends
+
+.subckt tg_vcro vdd vcon_p out in vcon_n gnd
+X0 out vcon_n in gnd sky130_fd_pr__nfet_01v8 ad=0.35 pd=2.7 as=0.35 ps=2.7 w=1 l=0.5
+X1 out vcon_p in vdd sky130_fd_pr__pfet_01v8 ad=0.7 pd=4.7 as=0.7 ps=4.7 w=2 l=0.5
+.ends
+
+.subckt delaycell_vcro vcp in vcn vdd out gnd
+Xinv_vcro_0 tg_vcro_0/out vdd out gnd inv_vcro
+Xtg_vcro_0 vdd vcp tg_vcro_0/out in vcn gnd tg_vcro
+.ends
+
+.subckt vcro_5s_taps out5 vcon_p vcon_n delaycell_vcro_2/in delaycell_vcro_4/in delaycell_vcro_1/in
++ delaycell_vcro_3/in vdd gnd
+Xdelaycell_vcro_0 vcon_p out5 vcon_n vdd delaycell_vcro_1/in gnd delaycell_vcro
+Xdelaycell_vcro_1 vcon_p delaycell_vcro_1/in vcon_n vdd delaycell_vcro_2/in gnd delaycell_vcro
+Xdelaycell_vcro_2 vcon_p delaycell_vcro_2/in vcon_n vdd delaycell_vcro_3/in gnd delaycell_vcro
+Xdelaycell_vcro_3 vcon_p delaycell_vcro_3/in vcon_n vdd delaycell_vcro_4/in gnd delaycell_vcro
+Xdelaycell_vcro_4 vcon_p delaycell_vcro_4/in vcon_n vdd out5 gnd delaycell_vcro
+.ends
+
+.subckt vcro_5s out vcon_p vcon_n vdd gnd
+Xdelaycell_vcro_0 vcon_p out vcon_n vdd delaycell_vcro_1/in gnd delaycell_vcro
+Xdelaycell_vcro_1 vcon_p delaycell_vcro_1/in vcon_n vdd delaycell_vcro_2/in gnd delaycell_vcro
+Xdelaycell_vcro_2 vcon_p delaycell_vcro_2/in vcon_n vdd delaycell_vcro_3/in gnd delaycell_vcro
+Xdelaycell_vcro_3 vcon_p delaycell_vcro_3/in vcon_n vdd delaycell_vcro_4/in gnd delaycell_vcro
+Xdelaycell_vcro_4 vcon_p delaycell_vcro_4/in vcon_n vdd out gnd delaycell_vcro
+.ends
+
+.subckt tt_um_nurirfansyah_alits01 clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5]
++ ua[6] ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7]
++ uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7]
++ uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4] VPWR VGND
+Xvcro_5s_0 uo_out[0] ua[2] ua[1] uo_out[3] uo_out[1] uo_out[4] uo_out[2] VPWR VGND
++ vcro_5s_taps
+Xvcro_5s_1 ua[0] ua[2] ua[1] VPWR VGND vcro_5s
+.ends
+

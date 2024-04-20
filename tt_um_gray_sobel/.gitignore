@@ -1,0 +1,13 @@
+**/env/
+**/dist/
+*.egg-info
+*pycache*
+__pycache__
+*sim_build*
+*runs*
+output_image.txt
+*.vvp
+*.vcd
+*.xml
+output_image.jpg
+.vscode

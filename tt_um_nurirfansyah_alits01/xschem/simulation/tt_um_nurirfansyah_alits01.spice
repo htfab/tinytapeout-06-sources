@@ -1,0 +1,190 @@
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/tt_um_nurirfansyah_alits01.sch
+.subckt tt_um_nurirfansyah_alits01 clk ena rst_n ua[3] ua[4] ua[5] ua[6] ua[7] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5]
++ ui_in[6] ui_in[7] uio_in[0] uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3]
++ uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7] uio_out[0] uio_out[1]
++ uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] ua[2] ua[1] ui_in[0] uo_out[0] ua[0] VGND VPWR
+*.ipin clk
+*.ipin ena
+*.ipin rst_n
+*.ipin ua[3]
+*.ipin ua[4]
+*.ipin ua[5]
+*.ipin ua[6]
+*.ipin ua[7]
+*.ipin ui_in[1]
+*.ipin ui_in[2]
+*.ipin ui_in[3]
+*.ipin ui_in[4]
+*.ipin ui_in[5]
+*.ipin ui_in[6]
+*.ipin ui_in[7]
+*.ipin uio_in[0]
+*.ipin uio_in[1]
+*.ipin uio_in[2]
+*.ipin uio_in[3]
+*.ipin uio_in[4]
+*.ipin uio_in[5]
+*.ipin uio_in[6]
+*.ipin uio_in[7]
+*.opin uio_oe[0]
+*.opin uio_oe[1]
+*.opin uio_oe[2]
+*.opin uio_oe[3]
+*.opin uio_oe[4]
+*.opin uio_oe[5]
+*.opin uio_oe[6]
+*.opin uio_oe[7]
+*.opin uo_out[1]
+*.opin uo_out[2]
+*.opin uo_out[3]
+*.opin uo_out[4]
+*.opin uo_out[5]
+*.opin uo_out[6]
+*.opin uo_out[7]
+*.iopin uio_out[0]
+*.iopin uio_out[1]
+*.iopin uio_out[2]
+*.iopin uio_out[3]
+*.iopin uio_out[4]
+*.iopin uio_out[5]
+*.iopin uio_out[6]
+*.iopin uio_out[7]
+*.ipin ua[2]
+*.ipin ua[1]
+*.ipin ui_in[0]
+*.opin uo_out[0]
+*.opin ua[0]
+*.iopin VGND
+*.iopin VPWR
+* noconn clk
+* noconn ena
+* noconn rst_n
+* noconn ua[3]
+* noconn ua[6]
+* noconn ui_in[1]
+* noconn ui_in[2]
+* noconn ui_in[3]
+* noconn ui_in[4]
+* noconn ui_in[5]
+* noconn ui_in[6]
+* noconn ui_in[7]
+* noconn uio_in[0]
+* noconn uio_in[1]
+* noconn uio_in[2]
+* noconn uio_in[3]
+* noconn uio_in[4]
+* noconn uio_in[5]
+* noconn uio_in[6]
+* noconn uio_in[7]
+* noconn ua[5]
+* noconn ua[4]
+* noconn ua[7]
+* noconn ui_in[0]
+x1 ua[0] VPWR ua[2] ua[1] VGND vcro_5elements
+* noconn uio_oe[0]
+* noconn uio_oe[1]
+* noconn uio_oe[2]
+* noconn uio_oe[3]
+* noconn uio_oe[4]
+* noconn uio_oe[5]
+* noconn uio_oe[6]
+* noconn uio_oe[7]
+* noconn uo_out[5]
+* noconn uo_out[6]
+* noconn uo_out[7]
+* noconn uio_out[0]
+* noconn uio_out[1]
+* noconn uio_out[2]
+* noconn uio_out[3]
+* noconn uio_out[4]
+* noconn uio_out[5]
+* noconn uio_out[6]
+* noconn uio_out[7]
+x2 uo_out[4] uo_out[3] uo_out[2] uo_out[1] uo_out[0] VPWR ua[2] ua[1] VGND vcro_5elements_taps
+.ends
+
+* expanding   symbol:  vcro_5elements.sym # of pins=5
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/vcro_5elements.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/vcro_5elements.sch
+.subckt vcro_5elements out vdd vcon_p vcon_n gnd
+*.ipin vdd
+*.ipin vcon_p
+*.ipin vcon_n
+*.ipin gnd
+*.opin out
+x1 vdd vcon_p net1 out vcon_n gnd delaycell_vcro
+x2 vdd vcon_p net2 net1 vcon_n gnd delaycell_vcro
+x3 vdd vcon_p net3 net2 vcon_n gnd delaycell_vcro
+x4 vdd vcon_p net4 net3 vcon_n gnd delaycell_vcro
+x5 vdd vcon_p out net4 vcon_n gnd delaycell_vcro
+.ends
+
+
+* expanding   symbol:  vcro_5elements_taps.sym # of pins=9
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/vcro_5elements_taps.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/vcro_5elements_taps.sch
+.subckt vcro_5elements_taps out1 out2 out3 out4 out5 vdd vcon_p vcon_n gnd
+*.ipin vdd
+*.ipin vcon_p
+*.ipin vcon_n
+*.ipin gnd
+*.opin out5
+*.opin out4
+*.opin out3
+*.opin out2
+*.opin out1
+x1 vdd vcon_p out1 out5 vcon_n gnd delaycell_vcro
+x2 vdd vcon_p out2 out1 vcon_n gnd delaycell_vcro
+x3 vdd vcon_p out3 out2 vcon_n gnd delaycell_vcro
+x4 vdd vcon_p out4 out3 vcon_n gnd delaycell_vcro
+x5 vdd vcon_p out5 out4 vcon_n gnd delaycell_vcro
+.ends
+
+
+* expanding   symbol:  delaycell_vcro.sym # of pins=6
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/delaycell_vcro.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/delaycell_vcro.sch
+.subckt delaycell_vcro vdd vcp out in vcn gnd
+*.ipin vdd
+*.ipin vcp
+*.ipin in
+*.ipin vcn
+*.ipin gnd
+*.opin out
+x9 vdd net1 out gnd inv
+x10 vdd vcp net1 in vcn gnd tg
+.ends
+
+
+* expanding   symbol:  inv.sym # of pins=4
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/inv.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/inv.sch
+.subckt inv vdd in out gnd
+*.ipin in
+*.ipin vdd
+*.ipin gnd
+*.opin out
+XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tg.sym # of pins=6
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/tg.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/tg.sch
+.subckt tg vdd vcon_p out in vcon_n gnd
+*.ipin vcon_p
+*.ipin vdd
+*.ipin vcon_n
+*.ipin gnd
+*.ipin in
+*.opin out
+XM1 out vcon_p in vdd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 in vcon_n out gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

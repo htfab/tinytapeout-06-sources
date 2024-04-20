@@ -1,0 +1,210 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell inv in circuit delaycell_vcro (0)(1 instance)
+Flattening unmatched subcell tg in circuit delaycell_vcro (0)(1 instance)
+Flattening unmatched subcell inv_vcro in circuit delaycell_vcro (1)(1 instance)
+Flattening unmatched subcell tg_vcro in circuit delaycell_vcro (1)(1 instance)
+
+Class delaycell_vcro (1):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: delaycell_vcro                  |Circuit 2: delaycell_vcro                  
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (3->2)             
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (3->2)             
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely with property errors.
+tg:10/sky130_fd_pr__pfet_01v8:M1 vs. tg_vcro_0/sky130_fd_pr__pfet_01v8:1:
+ L circuit1: 1   circuit2: 0.5   (delta=66.7%, cutoff=1%)
+tg:10/sky130_fd_pr__nfet_01v8:M2 vs. tg_vcro_0/sky130_fd_pr__nfet_01v8:0:
+ L circuit1: 1   circuit2: 0.5   (delta=66.7%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: delaycell_vcro                  |Circuit 2: delaycell_vcro                  
+-------------------------------------------|-------------------------------------------
+vcp                                        |vcp                                        
+vcn                                        |vcn                                        
+out                                        |out                                        
+in                                         |in                                         
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes delaycell_vcro and delaycell_vcro are equivalent.
+Flattening unmatched subcell vcro_5elements in circuit tt_um_nurirfansyah_alits01 (0)(1 instance)
+Flattening unmatched subcell vcro_5elements_taps in circuit tt_um_nurirfansyah_alits01 (0)(1 instance)
+Flattening unmatched subcell vcro_5s_taps in circuit tt_um_nurirfansyah_alits01 (1)(1 instance)
+Flattening unmatched subcell vcro_5s in circuit tt_um_nurirfansyah_alits01 (1)(1 instance)
+
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: clk
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ena
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: rst_n
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ua[3]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ua[4]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ua[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ua[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ua[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[1]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[2]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[3]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[4]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[0]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[1]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[2]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[3]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[4]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_in[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[0]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[1]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[2]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[3]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[4]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_oe[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uo_out[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uo_out[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uo_out[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[0]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[1]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[2]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[3]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[4]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[5]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[6]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: uio_out[7]
+Cell tt_um_nurirfansyah_alits01 (0) disconnected node: ui_in[0]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: clk
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ena
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: rst_n
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ua[3]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ua[4]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ua[5]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ua[6]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ua[7]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[0]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[1]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[2]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[3]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[4]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[5]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[6]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: ui_in[7]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[0]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[1]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[2]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[3]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[4]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[5]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[6]
+Cell tt_um_nurirfansyah_alits01 (1) disconnected node: uio_in[7]
+Subcircuit summary:
+Circuit 1: tt_um_nurirfansyah_alits01      |Circuit 2: tt_um_nurirfansyah_alits01      
+-------------------------------------------|-------------------------------------------
+delaycell_vcro (10)                        |delaycell_vcro (10)                        
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 14                         |Number of nets: 14                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: tt_um_nurirfansyah_alits01      |Circuit 2: tt_um_nurirfansyah_alits01      
+-------------------------------------------|-------------------------------------------
+ua[2]                                      |ua[2]                                      
+ua[1]                                      |ua[1]                                      
+VPWR                                       |VPWR                                       
+VGND                                       |VGND                                       
+uo_out[0]                                  |uo_out[0]                                  
+uo_out[1]                                  |uo_out[1]                                  
+uo_out[2]                                  |uo_out[2]                                  
+uo_out[3]                                  |uo_out[3]                                  
+uo_out[4]                                  |uo_out[4]                                  
+ua[0]                                      |ua[0]                                      
+clk                                        |clk                                        
+ena                                        |ena                                        
+rst_n                                      |rst_n                                      
+ua[3]                                      |ua[3]                                      
+ua[4]                                      |ua[4]                                      
+ua[5]                                      |ua[5]                                      
+ua[6]                                      |ua[6]                                      
+ua[7]                                      |ua[7]                                      
+ui_in[1]                                   |ui_in[1]                                   
+ui_in[2]                                   |ui_in[2]                                   
+ui_in[3]                                   |ui_in[3]                                   
+ui_in[4]                                   |ui_in[4]                                   
+ui_in[5]                                   |ui_in[5]                                   
+ui_in[6]                                   |ui_in[6]                                   
+ui_in[7]                                   |ui_in[7]                                   
+uio_in[0]                                  |uio_in[0]                                  
+uio_in[1]                                  |uio_in[1]                                  
+uio_in[2]                                  |uio_in[2]                                  
+uio_in[3]                                  |uio_in[3]                                  
+uio_in[4]                                  |uio_in[4]                                  
+uio_in[5]                                  |uio_in[5]                                  
+uio_in[6]                                  |uio_in[6]                                  
+uio_in[7]                                  |uio_in[7]                                  
+ui_in[0]                                   |ui_in[0]                                   
+uio_oe[0]                                  |(no matching pin)                          
+uio_oe[1]                                  |(no matching pin)                          
+uio_oe[2]                                  |(no matching pin)                          
+uio_oe[3]                                  |(no matching pin)                          
+uio_oe[4]                                  |(no matching pin)                          
+uio_oe[5]                                  |(no matching pin)                          
+uio_oe[6]                                  |(no matching pin)                          
+uio_oe[7]                                  |(no matching pin)                          
+uo_out[5]                                  |(no matching pin)                          
+uo_out[6]                                  |(no matching pin)                          
+uo_out[7]                                  |(no matching pin)                          
+uio_out[0]                                 |(no matching pin)                          
+uio_out[1]                                 |(no matching pin)                          
+uio_out[2]                                 |(no matching pin)                          
+uio_out[3]                                 |(no matching pin)                          
+uio_out[4]                                 |(no matching pin)                          
+uio_out[5]                                 |(no matching pin)                          
+uio_out[6]                                 |(no matching pin)                          
+uio_out[7]                                 |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes tt_um_nurirfansyah_alits01 and tt_um_nurirfansyah_alits01 are equivalent.
+
+Final result: Circuits match uniquely.
+.
+
+The following cells had property errors:
+ delaycell_vcro

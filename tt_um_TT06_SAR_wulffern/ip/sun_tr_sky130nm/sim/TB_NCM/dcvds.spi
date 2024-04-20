@@ -1,0 +1,78 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/TB_NCM_lpe.spi
+#else
+.include ../../../work/xsch/TB_NCM.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-6 abstol=1e-6  noopiter gminsteps=5
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+.param VDO = 0.2
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  0  dc {AVDD}
+
+IBP 0 IBP dc 1u
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT VSS IBO_DLCM_1 IBO_DLCM2_1 IBO_LCM_1 IBO_DLCM_4 IBO_DLCM2_4 IBO_LCM_4 IBP TB_NCM
+
+*----------------------------------------------------------------
+* MEASURES
+*----------------------------------------------------------------
+V1 VDO 0 dc {VDO}
+EDLCM_1 IBO_DLCM_1 0 value={V(VDO)}
+EDLCM2_1 IBO_DLCM2_1 0 value={V(VDO)}
+ELCM_1 IBO_LCM_1 0 dc value={V(VDO)}
+EDLCM_4 IBO_DLCM_4 0 dc value={V(VDO)}
+EDLCM2_4 IBO_DLCM2_4 0 value={V(VDO)}
+ELCM_4 IBO_LCM_4 0 value={V(VDO)}
+
+
+*Save temperature
+B5 temp 0 v=temper
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+#ifdef Debug
+.save all
+#else
+.save v(temp)
+.save v(VSS) v(IBO_DLCM_1) v(IBO_DLCM2_1) v(IBO_LCM_1) v(VSS) v(IBO_DLCM_4) v(IBO_DLCM2_4) v(IBO_LCM_4) v(IBP)
+.save i(EDLCM_1) i(EDLCM2_1) i(ELCM_1) i(EDLCM_4) i(EDLCM2_4) i(ELCM_4) i(v.xdut.vbias)
+#endif
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 1n 2n 0
+dc V1 0.1 1 0.05
+write
+quit
+.endc
+
+.end

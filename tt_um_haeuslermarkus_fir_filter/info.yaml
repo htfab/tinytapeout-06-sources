@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "FIR Filter with adaptable coefficients"      # Project title
+  author:       "Markus Häusler"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "FIR Filter with configurable coefficients via serial interface"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_haeuslermarkus_fir_filter"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_haeuslermarkus_fir_filter.v"
+    - "fir_main.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "FIR Input data Bit 0"
+  ui[1]: "FIR Input data Bit 1"
+  ui[2]: "FIR Input data Bit 2"
+  ui[3]: "FIR Input data Bit 3"
+  ui[4]: "FIR Input data Bit 4"
+  ui[5]: "FIR Input data Bit 5"
+  ui[6]: "FIR Input data Bit 6"
+  ui[7]: "FIR Input data Bit 7"
+
+  # Outputs
+  uo[0]: "FIR Output data Bit 0"
+  uo[1]: "FIR Output data Bit 1"
+  uo[2]: "FIR Output data Bit 2"
+  uo[3]: "FIR Output data Bit 3"
+  uo[4]: "FIR Output data Bit 4"
+  uo[5]: "FIR Output data Bit 5"
+  uo[6]: "FIR Output data Bit 6"
+  uo[7]: "FIR Output data Bit 7"
+
+  # Bidirectional pins
+  uio[0]: "FIR Output data Bit 8"
+  uio[1]: "FIR Output data Bit 9"
+  uio[2]: "FIR Output data Bit 10"
+  uio[3]: "not used"
+  uio[4]: "not used"
+  uio[5]: "not used"
+  uio[6]: "FIR CONFIG ENABLE"
+  uio[7]: "FIR TVALID Input"
+
+# Do not change!
+yaml_version: 6

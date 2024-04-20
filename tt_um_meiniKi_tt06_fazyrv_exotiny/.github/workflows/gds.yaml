@@ -1,0 +1,83 @@
+name: gds
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  preproc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: oss-cad-suite
+        uses: YosysHQ/setup-oss-cad-suite@v3
+        with:
+          version: '2024-02-02'
+
+      - name: Run Yosys
+        run: |
+          mkdir build
+          yosys -s synth/tt.ys
+
+      - name: Upload preprocessed verilog
+        uses: actions/upload-artifact@v2
+        with:
+          name: exotiny_preproc
+          path: ./build/exotiny_preproc.v
+
+  gds:
+    needs: preproc
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Download preprocessed verilog
+        uses: actions/download-artifact@v2
+        with:
+          name: exotiny_preproc
+          path: ./build
+
+      - name: Build GDS
+        uses: MichaelBell/tt-gds-action@tt06-no-pin-swaps
+  
+  precheck:
+    needs: gds
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Tiny Tapeout Precheck
+        uses: TinyTapeout/tt-gds-action/precheck@tt06
+
+  gl_test:
+    needs: gds
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: setup gcc
+        uses: ./.github/workflows/setup-riscv-toolchain
+
+      - name: build test firmware
+        run: |
+          cd sim && make firmware
+
+      - name: GL test
+        uses: TinyTapeout/tt-gds-action/gl_test@tt06
+
+  viewer:
+    needs: gds
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    steps:
+      - uses: TinyTapeout/tt-gds-action/viewer@tt06

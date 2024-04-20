@@ -1,0 +1,125 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Wed Feb 21 19:14:25 2024
+[*]
+[dumpfile] "/Users/weihao/Hardware_projects/tinytapeout/tt06-spiflash/test/tb.vcd"
+[dumpfile_mtime] "Wed Feb 21 19:14:17 2024"
+[dumpfile_size] 45004
+[savefile] "/Users/weihao/Hardware_projects/tinytapeout/tt06-spiflash/test/tb.gtkw"
+[timestart] 2257000000
+[size] 1920 974
+[pos] -1 -1
+*-30.271074 10368000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.user_project.
+[sst_width] 193
+[signals_width] 294
+[sst_expanded] 1
+[sst_vpaned_height] 298
+@28
+tb.user_project.clk
+tb.user_project.sclk
+tb.user_project.rst_n
+@c00028
+tb.user_project.clk1.spi_clk_state[1:0]
+@28
+(0)tb.user_project.clk1.spi_clk_state[1:0]
+(1)tb.user_project.clk1.spi_clk_state[1:0]
+@1401200
+-group_end
+@c00024
+tb.user_project.spi_clk_counter[7:0]
+@28
+(0)tb.user_project.spi_clk_counter[7:0]
+(1)tb.user_project.spi_clk_counter[7:0]
+(2)tb.user_project.spi_clk_counter[7:0]
+(3)tb.user_project.spi_clk_counter[7:0]
+(4)tb.user_project.spi_clk_counter[7:0]
+(5)tb.user_project.spi_clk_counter[7:0]
+(6)tb.user_project.spi_clk_counter[7:0]
+(7)tb.user_project.spi_clk_counter[7:0]
+@1401200
+-group_end
+@c00022
+tb.user_project.spi_rx_buffer[31:0]
+@28
+(0)tb.user_project.spi_rx_buffer[31:0]
+(1)tb.user_project.spi_rx_buffer[31:0]
+(2)tb.user_project.spi_rx_buffer[31:0]
+(3)tb.user_project.spi_rx_buffer[31:0]
+(4)tb.user_project.spi_rx_buffer[31:0]
+(5)tb.user_project.spi_rx_buffer[31:0]
+(6)tb.user_project.spi_rx_buffer[31:0]
+(7)tb.user_project.spi_rx_buffer[31:0]
+(8)tb.user_project.spi_rx_buffer[31:0]
+(9)tb.user_project.spi_rx_buffer[31:0]
+(10)tb.user_project.spi_rx_buffer[31:0]
+(11)tb.user_project.spi_rx_buffer[31:0]
+(12)tb.user_project.spi_rx_buffer[31:0]
+(13)tb.user_project.spi_rx_buffer[31:0]
+(14)tb.user_project.spi_rx_buffer[31:0]
+(15)tb.user_project.spi_rx_buffer[31:0]
+(16)tb.user_project.spi_rx_buffer[31:0]
+(17)tb.user_project.spi_rx_buffer[31:0]
+(18)tb.user_project.spi_rx_buffer[31:0]
+(19)tb.user_project.spi_rx_buffer[31:0]
+(20)tb.user_project.spi_rx_buffer[31:0]
+(21)tb.user_project.spi_rx_buffer[31:0]
+(22)tb.user_project.spi_rx_buffer[31:0]
+(23)tb.user_project.spi_rx_buffer[31:0]
+(24)tb.user_project.spi_rx_buffer[31:0]
+(25)tb.user_project.spi_rx_buffer[31:0]
+(26)tb.user_project.spi_rx_buffer[31:0]
+(27)tb.user_project.spi_rx_buffer[31:0]
+(28)tb.user_project.spi_rx_buffer[31:0]
+(29)tb.user_project.spi_rx_buffer[31:0]
+(30)tb.user_project.spi_rx_buffer[31:0]
+(31)tb.user_project.spi_rx_buffer[31:0]
+@1401200
+-group_end
+@28
+tb.user_project.mosi
+tb.user_project.miso
+@c00022
+tb.user_project.spi_tx_buffer[31:0]
+@28
+(0)tb.user_project.spi_tx_buffer[31:0]
+(1)tb.user_project.spi_tx_buffer[31:0]
+(2)tb.user_project.spi_tx_buffer[31:0]
+(3)tb.user_project.spi_tx_buffer[31:0]
+(4)tb.user_project.spi_tx_buffer[31:0]
+(5)tb.user_project.spi_tx_buffer[31:0]
+(6)tb.user_project.spi_tx_buffer[31:0]
+(7)tb.user_project.spi_tx_buffer[31:0]
+(8)tb.user_project.spi_tx_buffer[31:0]
+(9)tb.user_project.spi_tx_buffer[31:0]
+(10)tb.user_project.spi_tx_buffer[31:0]
+(11)tb.user_project.spi_tx_buffer[31:0]
+(12)tb.user_project.spi_tx_buffer[31:0]
+(13)tb.user_project.spi_tx_buffer[31:0]
+(14)tb.user_project.spi_tx_buffer[31:0]
+(15)tb.user_project.spi_tx_buffer[31:0]
+(16)tb.user_project.spi_tx_buffer[31:0]
+(17)tb.user_project.spi_tx_buffer[31:0]
+(18)tb.user_project.spi_tx_buffer[31:0]
+(19)tb.user_project.spi_tx_buffer[31:0]
+(20)tb.user_project.spi_tx_buffer[31:0]
+(21)tb.user_project.spi_tx_buffer[31:0]
+(22)tb.user_project.spi_tx_buffer[31:0]
+(23)tb.user_project.spi_tx_buffer[31:0]
+(24)tb.user_project.spi_tx_buffer[31:0]
+(25)tb.user_project.spi_tx_buffer[31:0]
+(26)tb.user_project.spi_tx_buffer[31:0]
+(27)tb.user_project.spi_tx_buffer[31:0]
+(28)tb.user_project.spi_tx_buffer[31:0]
+(29)tb.user_project.spi_tx_buffer[31:0]
+(30)tb.user_project.spi_tx_buffer[31:0]
+(31)tb.user_project.spi_tx_buffer[31:0]
+@1401200
+-group_end
+@28
+tb.user_project.state[2:0]
+@29
+tb.user_project.cs
+[pattern_trace] 1
+[pattern_trace] 0

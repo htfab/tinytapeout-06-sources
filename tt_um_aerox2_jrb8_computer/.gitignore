@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.vscode
+*.vcd
+runs
+sim_build
+__pycache__/
+results.xml
+user_config.tcl
+build
+tt/

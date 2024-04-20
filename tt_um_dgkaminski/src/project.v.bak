@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2024 Your Name
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+`define default_netname none
+
+module tt_um_example (
+    input  wire [7:0] ui_in,    // Dedicated inputs
+    output wire [7:0] uo_out,   // Dedicated outputs
+    input  wire [7:0] uio_in,   // IOs: Input path
+    output wire [7:0] uio_out,  // IOs: Output path
+    output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output) //so for each bit, input if uio_oe[n] is 0, output if 1
+    input  wire       ena,      // will go high when the design is enabled
+    input  wire       clk,      // clock
+    input  wire       rst_n     // reset_n - low to reset
+);
+
+
+/*assignments by pin:
+
+*/
+
+
+  alu alu0(
+  .A(ui_in[3:0]), 
+  .B(ui_in), 
+  .FS(),
+  .Y(),
+  .C(),
+  .V(),
+  .N(),
+  .Z()
+  );
+  input  [3:0]  A;
+  input  [3:0]  B;
+  input  [2:0]  FS;
+
+  output [3:0]  Y;
+  output        C;
+  output        V;
+  output        N;
+  output        Z;
+
+  // All output pins must be assigned. If not used, assign to 0.
+  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
+  assign uio_out = 0;
+  assign uio_oe  = 0;
+
+endmodule

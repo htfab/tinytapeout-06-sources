@@ -1,0 +1,39 @@
+magic
+tech sky130A
+timestamp 1713029161
+<< poly >>
+rect 162 79 1098 97
+<< locali >>
+rect 300 117 432 147
+rect 774 117 882 147
+rect 300 103 330 117
+rect 216 73 330 103
+<< metal3 >>
+rect 378 0 478 176
+rect 774 0 874 176
+use SUNTR_NCHDL  MN0
+timestamp 1711839600
+transform 1 0 0 0 1 0
+box -90 -66 630 242
+use SUNTR_PCHDL  MP0
+timestamp 1711839600
+transform 1 0 630 0 1 0
+box 0 -66 720 242
+use SUNTR_cut_M1M4_2x1  xcut0
+timestamp 1711839600
+transform 1 0 774 0 1 29
+box 0 0 100 38
+use SUNTR_cut_M1M4_2x1  xcut1
+timestamp 1711839600
+transform 1 0 378 0 1 29
+box 0 0 100 38
+<< labels >>
+flabel locali s 774 117 882 147 0 FreeSans 200 0 0 0 Y
+port 1 nsew signal bidirectional
+flabel metal3 s 774 0 874 176 0 FreeSans 200 0 0 0 AVDD
+port 2 nsew signal bidirectional
+flabel metal3 s 378 0 478 176 0 FreeSans 200 0 0 0 AVSS
+port 3 nsew signal bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 1260 176
+<< end >>

@@ -1,0 +1,92 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_high_po_0p35 and Circuit 2 cell sky130_fd_pr__res_high_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_0p35  |Circuit 2: sky130_fd_pr__res_high_po_0p35  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_0p35 and sky130_fd_pr__res_high_po_0p35 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_V5FT3Q in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3HZ9VM in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_EPHDNF in circuit VCII-final (0)(5 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_GSBCLJ in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BDVWJN in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_RF5GSL in circuit VCII-final (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__res_high_po_0p35_FFK5MY in circuit VCII-final (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_FMJ72H in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_3H5TVM in circuit VCII-final (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_SMX62R in circuit VCII-final (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_P7N2DR in circuit VCII-final (0)(2 instances)
+
+Class VCII-final (0):  Merged 480 parallel devices.
+Class VCII-final (0):  Merged 4 series devices.
+Class VCII-final (1):  Merged 4 series devices.
+Subcircuit summary:
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (195->10)          |sky130_fd_pr__nfet_01v8 (19->10)           
+sky130_fd_pr__pfet_01v8 (302->7)           |sky130_fd_pr__pfet_01v8 (19->7)            
+sky130_fd_pr__res_xhigh_po_0p35 (3->1)     |sky130_fd_pr__res_xhigh_po_0p35 (3->1)     
+sky130_fd_pr__res_high_po_0p35 (3->1)      |sky130_fd_pr__res_high_po_0p35 (3->1)      
+Number of devices: 19                      |Number of devices: 19                      
+Number of nets: 14                         |Number of nets: 14                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: VCII-final                      |Circuit 2: VCII-final                      
+-------------------------------------------|-------------------------------------------
+ref                                        |ref                                        
+y                                          |y                                          
+x                                          |x                                          
+vdd                                        |vdd                                        
+z                                          |z                                          
+vss                                        |vss                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes VCII-final and VCII-final are equivalent.
+
+Final result: Circuits match uniquely.
+.

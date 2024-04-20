@@ -1,0 +1,129 @@
+** sch_path: /foss/designs/sim/tb_tt06_tdc.sch
+**.subckt tb_tt06_tdc
+VSTART start GND 0 pwl(0 0 500n 0 500.1n 1.8)
+.save v(start)
+VSTOP stop GND 0 pwl(0 0 100n 1.8 200n 1.8 200.1n 0 540n 0 540.1n 1.8)
+.save v(stop)
+Cload1[15] res_ring[15] GND 10f m=1
+Cload1[14] res_ring[14] GND 10f m=1
+Cload1[13] res_ring[13] GND 10f m=1
+Cload1[12] res_ring[12] GND 10f m=1
+Cload1[11] res_ring[11] GND 10f m=1
+Cload1[10] res_ring[10] GND 10f m=1
+Cload1[9] res_ring[9] GND 10f m=1
+Cload1[8] res_ring[8] GND 10f m=1
+Cload1[7] res_ring[7] GND 10f m=1
+Cload1[6] res_ring[6] GND 10f m=1
+Cload1[5] res_ring[5] GND 10f m=1
+Cload1[4] res_ring[4] GND 10f m=1
+Cload1[3] res_ring[3] GND 10f m=1
+Cload1[2] res_ring[2] GND 10f m=1
+Cload1[1] res_ring[1] GND 10f m=1
+Cload1[0] res_ring[0] GND 10f m=1
+.save v(res_ring[15])
+.save v(res_ring[14])
+.save v(res_ring[13])
+.save v(res_ring[12])
+.save v(res_ring[11])
+.save v(res_ring[10])
+.save v(res_ring[9])
+.save v(res_ring[8])
+.save v(res_ring[7])
+.save v(res_ring[6])
+.save v(res_ring[5])
+.save v(res_ring[4])
+.save v(res_ring[3])
+.save v(res_ring[2])
+.save v(res_ring[1])
+.save v(res_ring[0])
+.save v(vdd)
+VDAC2 VDD GND 0 pwl(0 0 100n 1.8)
+Cload2[2] res_ctr[2] GND 10f m=1
+Cload2[1] res_ctr[1] GND 10f m=1
+Cload2[0] res_ctr[0] GND 10f m=1
+.save v(res_ctr[2])
+.save v(res_ctr[1])
+.save v(res_ctr[0])
+x1 dbg_stop dbg_ctr[0] dbg_ctr[1] dbg_ctr[2] dbg_dly[10] dbg_dly[11] dbg_dly[12] dbg_dly[13] dbg_dly[14] dbg_dly[15] dbg_dly[2]
++ dbg_dly[5] dbg_dly[7] dbg_dly[9] start res_ctr[1] res_ctr[2] res_ring[10] res_ring[12] res_ring[14] res_ring[15] res_ring[2] res_ring[5]
++ res_ring[7] res_ring[4] res_ring[9] res_ring[1] dbg_dly[4] dbg_dly[1] dbg_dly[6] res_ring[6] res_ring[11] res_ring[3] res_ring[8] res_ring[0]
++ res_ctr[0] dbg_dly[3] dbg_dly[8] dbg_dly[0] stop res_ring[13] GND VDD tdc_ring
+Cload3[2] dbg_ctr[2] GND 0.1f m=1
+Cload3[1] dbg_ctr[1] GND 0.1f m=1
+Cload3[0] dbg_ctr[0] GND 0.1f m=1
+Cload4[15] dbg_dly[15] GND 0.1f m=1
+Cload4[14] dbg_dly[14] GND 0.1f m=1
+Cload4[13] dbg_dly[13] GND 0.1f m=1
+Cload4[12] dbg_dly[12] GND 0.1f m=1
+Cload4[11] dbg_dly[11] GND 0.1f m=1
+Cload4[10] dbg_dly[10] GND 0.1f m=1
+Cload4[9] dbg_dly[9] GND 0.1f m=1
+Cload4[8] dbg_dly[8] GND 0.1f m=1
+Cload4[7] dbg_dly[7] GND 0.1f m=1
+Cload4[6] dbg_dly[6] GND 0.1f m=1
+Cload4[5] dbg_dly[5] GND 0.1f m=1
+Cload4[4] dbg_dly[4] GND 0.1f m=1
+Cload4[3] dbg_dly[3] GND 0.1f m=1
+Cload4[2] dbg_dly[2] GND 0.1f m=1
+Cload4[1] dbg_dly[1] GND 0.1f m=1
+Cload4[0] dbg_dly[0] GND 0.1f m=1
+.save v(dbg_dly[15])
+.save v(dbg_dly[14])
+.save v(dbg_dly[13])
+.save v(dbg_dly[12])
+.save v(dbg_dly[11])
+.save v(dbg_dly[10])
+.save v(dbg_dly[9])
+.save v(dbg_dly[8])
+.save v(dbg_dly[7])
+.save v(dbg_dly[6])
+.save v(dbg_dly[5])
+.save v(dbg_dly[4])
+.save v(dbg_dly[3])
+.save v(dbg_dly[2])
+.save v(dbg_dly[1])
+.save v(dbg_dly[0])
+.save v(dbg_ctr[2])
+.save v(dbg_ctr[1])
+.save v(dbg_ctr[0])
+Cload5 dbg_stop GND 0.1f m=1
+.save v(dbg_stop)
+**** begin user architecture code
+
+
+
+* ngspice commands
+****************
+
+****************
+* Misc
+****************
+.param fclk=10MEG
+.options method=gear maxord=2
+.temp 30
+
+.control
+set num_threads=6
+tran 0.01n 600n
+
+write tb_tt06_tdc.raw
+
+*exit
+.endc
+
+
+
+
+** opencircuitdesign pdks install
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/sim/tdc_ring.sym # of pins=9
+** sym_path: /foss/designs/sim/tdc_ring.sym
+.include tdc_ring.pex.spice
+.GLOBAL VDD
+.GLOBAL GND
+.end

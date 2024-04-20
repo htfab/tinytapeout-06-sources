@@ -1,0 +1,231 @@
+timestamp 1713548907
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use delaycell_vcro delaycell_vcro_4 1 0 4690 0 1 -10
+use delaycell_vcro delaycell_vcro_3 1 0 3520 0 1 -10
+use delaycell_vcro delaycell_vcro_2 1 0 2350 0 1 -10
+use delaycell_vcro delaycell_vcro_1 1 0 1180 0 1 -10
+use delaycell_vcro delaycell_vcro_0 1 0 10 0 1 -10
+port "gnd" 8 0 0 100 20 m1
+port "vcon_n" 7 30 300 40 400 m2
+port "out5" 4 5790 490 5820 610 m2
+port "vcon_p" 6 30 700 40 800 m2
+port "vdd" 5 0 1260 80 1350 m1
+node "gnd" 0 70.3258 0 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9000 380 0 0 0 0 0 0 0 0 0 0
+node "vcon_n" 11 966.1 30 300 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65000 2300 356200 10060 0 0 0 0 0 0 0 0
+node "m1_4440_480#" 1 621.935 4440 480 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33600 880 25200 640 113200 2400 0 0 0 0 0 0
+node "m1_3280_480#" 1 537.469 3280 480 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32900 860 25200 640 115200 2440 0 0 0 0 0 0
+node "m1_2100_480#" 1 556.695 2100 480 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 42700 1140 25200 640 113200 2400 0 0 0 0 0 0
+node "m1_940_480#" 1 604.55 940 480 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32900 860 25200 640 113200 2400 0 0 0 0 0 0
+node "out5" 10 2552.77 5790 490 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 31400 1060 709900 14140 101600 1960 0 0 0 0 0 0
+node "vcon_p" 13 2045.44 30 700 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72700 2440 417800 11820 0 0 0 0 0 0 0 0
+node "vdd" 0 67.0525 0 1260 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7200 340 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vcon_p" "vcon_n" 573.464
+cap "vdd" "m1_940_480#" 0.601321
+cap "m1_4440_480#" "vcon_n" 81.5145
+cap "m1_3280_480#" "vcon_n" 81.0203
+cap "vcon_p" "m1_4440_480#" 181.755
+cap "m1_2100_480#" "m1_940_480#" 80.5235
+cap "vcon_p" "m1_3280_480#" 181.333
+cap "out5" "m1_940_480#" 27.8619
+cap "out5" "gnd" 69.4432
+cap "m1_3280_480#" "m1_4440_480#" 80.5235
+cap "vcon_p" "vdd" 4.59112
+cap "m1_2100_480#" "vcon_n" 112.768
+cap "out5" "vcon_n" 1254.46
+cap "m1_2100_480#" "vcon_p" 215.51
+cap "vcon_p" "out5" 106.513
+cap "m1_4440_480#" "out5" 16.7871
+cap "m1_2100_480#" "m1_3280_480#" 80.5443
+cap "m1_3280_480#" "out5" 5.1411
+cap "vdd" "out5" 1.93135
+cap "gnd" "vcon_n" 11.8462
+cap "vcon_n" "m1_940_480#" 81.0203
+cap "m1_2100_480#" "out5" 5.40869
+cap "vcon_p" "m1_940_480#" 181.698
+cap "delaycell_vcro_2/gnd" "delaycell_vcro_2/vcp" 1.65697
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_2/gnd" -0.615631
+cap "delaycell_vcro_0/in" "delaycell_vcro_1/tg_vcro_0/out" 0.0340006
+cap "delaycell_vcro_2/vcn" "delaycell_vcro_2/vdd" 0.847749
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_2/vcn" 84.6619
+cap "delaycell_vcro_2/vcp" "delaycell_vcro_2/vcn" -11.1209
+cap "delaycell_vcro_1/in" "delaycell_vcro_2/vdd" 171.998
+cap "delaycell_vcro_1/in" "delaycell_vcro_2/vcp" 55.633
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_1/in" 98.0644
+cap "delaycell_vcro_2/gnd" "delaycell_vcro_2/vcn" 63.2078
+cap "delaycell_vcro_0/in" "delaycell_vcro_2/vdd" 3.86651
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_1/tg_vcro_0/out" 1.84664
+cap "delaycell_vcro_1/in" "delaycell_vcro_2/gnd" 15.2112
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_0/in" 44.041
+cap "delaycell_vcro_2/vcp" "delaycell_vcro_0/in" 35.6707
+cap "delaycell_vcro_1/in" "delaycell_vcro_2/vcn" 22.1749
+cap "delaycell_vcro_1/in" "delaycell_vcro_2/in" 1.34266
+cap "delaycell_vcro_2/gnd" "delaycell_vcro_0/in" 471.621
+cap "delaycell_vcro_0/in" "delaycell_vcro_2/vcn" 65.5808
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_2/vdd" 5.39342
+cap "delaycell_vcro_2/vcp" "delaycell_vcro_2/vdd" 133.808
+cap "delaycell_vcro_1/in" "delaycell_vcro_1/tg_vcro_0/out" 21.7749
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_2/vcp" 111.348
+cap "delaycell_vcro_1/in" "delaycell_vcro_0/in" 6.49422
+cap "delaycell_vcro_2/gnd" "delaycell_vcro_2/vdd" -7.8815
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_2/tg_vcro_0/out" 1.84664
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_3/vdd" 5.39342
+cap "delaycell_vcro_2/in" "delaycell_vcro_3/vcn" 31.1961
+cap "delaycell_vcro_2/in" "delaycell_vcro_1/in" -0.00539687
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_0/in" 0.247341
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_3/vcp" 1.91674
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_0/in" 23.3373
+cap "delaycell_vcro_0/in" "delaycell_vcro_3/vdd" 0.65912
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_1/tg_vcro_0/out" -0.615631
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_3/vcn" 14.8198
+cap "delaycell_vcro_3/in" "delaycell_vcro_3/vcn" 0.333636
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_3/vdd" -12.25
+cap "delaycell_vcro_0/tg_vcro_0/out" "delaycell_vcro_1/in" 1.10489
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_3/vcn" -7.97156
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_1/in" 54.9968
+cap "delaycell_vcro_2/tg_vcro_0/out" "delaycell_vcro_3/vcn" 3.61457
+cap "delaycell_vcro_3/vdd" "delaycell_vcro_3/vcn" 0.987051
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_3/vcn" 97.704
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_1/in" 2.26464
+cap "delaycell_vcro_3/in" "delaycell_vcro_2/in" -0.461545
+cap "delaycell_vcro_3/vdd" "delaycell_vcro_1/in" 5.92199
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_2/in" 68.7601
+cap "delaycell_vcro_2/tg_vcro_0/out" "delaycell_vcro_2/in" 21.8093
+cap "delaycell_vcro_3/vdd" "delaycell_vcro_2/in" 180.801
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_2/in" 100.663
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_0/in" 595.682
+cap "delaycell_vcro_0/in" "delaycell_vcro_3/vcn" 8.85699
+cap "delaycell_vcro_0/in" "delaycell_vcro_1/in" 4.94449
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_3/vcn" 116.457
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_1/in" 2.40622
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_0/tg_vcro_0/out" 14.2941
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_3/in" 0.559013
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_0/tg_vcro_0/out" 1.27103
+cap "delaycell_vcro_0/in" "delaycell_vcro_2/in" 8.50702
+cap "delaycell_vcro_3/vcn" "delaycell_vcro_1/in" 46.316
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_2/tg_vcro_0/out" 3.44571
+cap "delaycell_vcro_3/gnd" "delaycell_vcro_2/in" 17.5376
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_1/tg_vcro_0/out" 123.864
+cap "delaycell_vcro_3/vcp" "delaycell_vcro_3/vdd" 220.781
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vcn" 85.222
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_2/tg_vcro_0/out" 95.8672
+cap "out5" "delaycell_vcro_3/in" 10.3289
+cap "delaycell_vcro_4/gnd" "out5" 580.802
+cap "out5" "delaycell_vcro_2/tg_vcro_0/out" 23.3373
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_2/in" 5.28305
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_4/vcp" 1.77778
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_2/tg_vcro_0/out" 1.27103
+cap "out5" "delaycell_vcro_2/in" 1.6043
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_3/in" 21.7749
+cap "out5" "delaycell_vcro_4/vcn" 16.3071
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/vcp" 29.4732
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_2/tg_vcro_0/out" 1.84664
+cap "delaycell_vcro_1/tg_vcro_0/out" "delaycell_vcro_4/vcn" 1.77778
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_3/in" 182.156
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_4/vcp" 164.356
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vdd" -8.544
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_2/tg_vcro_0/out" 5.39342
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_3/tg_vcro_0/out" 21.8474
+cap "delaycell_vcro_3/in" "delaycell_vcro_4/in" -0.331253
+cap "delaycell_vcro_4/vcp" "delaycell_vcro_4/in" 0.563207
+cap "delaycell_vcro_3/in" "delaycell_vcro_4/vcp" 110.474
+cap "out5" "delaycell_vcro_3/tg_vcro_0/out" 5.11209
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vcp" 2.4434
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_3/in" 17.6174
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/vdd" 1.26154
+cap "delaycell_vcro_2/tg_vcro_0/out" "delaycell_vcro_3/in" 99.228
+cap "delaycell_vcro_2/tg_vcro_0/out" "delaycell_vcro_4/vcp" 122.196
+cap "delaycell_vcro_2/in" "delaycell_vcro_3/in" 0.519239
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_2/tg_vcro_0/out" -0.615631
+cap "delaycell_vcro_2/in" "delaycell_vcro_4/vcp" 7.62223
+cap "out5" "delaycell_vcro_4/vdd" 0.842469
+cap "delaycell_vcro_2/in" "delaycell_vcro_2/tg_vcro_0/out" 2.22582
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/in" 0.333636
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_3/in" 67.9222
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/vcp" -4.11799
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/vcn" 53.1791
+cap "delaycell_vcro_4/in" "delaycell_vcro_3/tg_vcro_0/out" 100.663
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_4/out" 0.687203
+cap "delaycell_vcro_4/tg_vcro_0/out" "delaycell_vcro_4/vcp" 53.766
+cap "delaycell_vcro_4/out" "delaycell_vcro_4/vcp" 1.60416
+cap "delaycell_vcro_4/tg_vcro_0/out" "delaycell_vcro_4/out" 13.71
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/gnd" 17.5376
+cap "delaycell_vcro_2/tg_vcro_0/out" "delaycell_vcro_3/tg_vcro_0/out" 1.27103
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/vdd" 0.505939
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/vdd" 5.39342
+cap "delaycell_vcro_3/in" "delaycell_vcro_4/vcp" 0.247341
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/tg_vcro_0/out" 1.84664
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/tg_vcro_0/out" 5.69819
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/vcp" -7.17133
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/vcp" 96.1685
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vdd" -8.93757
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/vdd" 184.418
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_4/out" 13.9626
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/out" 18.2252
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vcp" 5.07582
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/tg_vcro_0/out" 27.1377
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/vcp" 111.514
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/out" 594.982
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/out" 14.9181
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_3/in" 2.26464
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_3/in" 0.235069
+cap "delaycell_vcro_4/vcn" "delaycell_vcro_3/tg_vcro_0/out" 77.6067
+cap "delaycell_vcro_4/in" "delaycell_vcro_3/in" 1.66852
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_4/vcn" 75.7955
+cap "delaycell_vcro_4/gnd" "delaycell_vcro_3/tg_vcro_0/out" -0.615631
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_4/vcp" 188.41
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/out" -0.57215
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_4/out" 9.41742
+cap "delaycell_vcro_4/in" "delaycell_vcro_4/tg_vcro_0/out" 0.507067
+cap "delaycell_vcro_4/vdd" "delaycell_vcro_4/vcp" 26.5324
+cap "delaycell_vcro_4/out" "delaycell_vcro_4/gnd" 234.579
+cap "delaycell_vcro_4/vcp" "delaycell_vcro_4/gnd" 3.39984
+cap "delaycell_vcro_4/out" "delaycell_vcro_3/tg_vcro_0/out" 1.1719
+cap "delaycell_vcro_4/out" "delaycell_vcro_4/vcn" 2.82055
+cap "delaycell_vcro_3/tg_vcro_0/out" "delaycell_vcro_4/tg_vcro_0/out" 1.27103
+cap "delaycell_vcro_4/vcp" "delaycell_vcro_4/out" 27.6505
+cap "delaycell_vcro_4/out" "delaycell_vcro_4/tg_vcro_0/out" 66.6102
+cap "delaycell_vcro_4/vcp" "delaycell_vcro_4/tg_vcro_0/out" 55.8956
+merge "delaycell_vcro_4/VSUBS" "delaycell_vcro_3/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_3/VSUBS" "delaycell_vcro_0/VSUBS"
+merge "delaycell_vcro_0/VSUBS" "delaycell_vcro_1/VSUBS"
+merge "delaycell_vcro_1/VSUBS" "delaycell_vcro_2/VSUBS"
+merge "delaycell_vcro_2/VSUBS" "VSUBS"
+merge "delaycell_vcro_4/vcp" "delaycell_vcro_3/vcp" -1399.65 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13200 -1340 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_3/vcp" "delaycell_vcro_0/vcp"
+merge "delaycell_vcro_0/vcp" "delaycell_vcro_1/vcp"
+merge "delaycell_vcro_1/vcp" "delaycell_vcro_2/vcp"
+merge "delaycell_vcro_2/vcp" "vcon_p"
+merge "delaycell_vcro_3/inv_vcro_0/vdd" "delaycell_vcro_0/inv_vcro_0/vdd" -945.478 0 0 0 0 0 -4240 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -560 -7200 -1060 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_0/inv_vcro_0/vdd" "delaycell_vcro_0/vdd"
+merge "delaycell_vcro_0/vdd" "delaycell_vcro_4/vdd"
+merge "delaycell_vcro_4/vdd" "delaycell_vcro_3/vdd"
+merge "delaycell_vcro_3/vdd" "vdd"
+merge "vdd" "delaycell_vcro_1/vdd"
+merge "delaycell_vcro_1/vdd" "delaycell_vcro_2/vdd"
+merge "delaycell_vcro_0/out" "delaycell_vcro_1/in" -454.754 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14400 -620 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_1/in" "m1_940_480#"
+merge "delaycell_vcro_3/out" "delaycell_vcro_4/in" -472.734 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14400 -620 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_4/in" "m1_4440_480#"
+merge "delaycell_vcro_4/out" "delaycell_vcro_0/in" -890.675 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15100 -640 -140000 -2800 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_0/in" "out5"
+merge "delaycell_vcro_3/inv_vcro_0/gnd" "delaycell_vcro_0/inv_vcro_0/gnd" -662.885 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -560 -9000 -1100 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_0/inv_vcro_0/gnd" "delaycell_vcro_0/gnd"
+merge "delaycell_vcro_0/gnd" "delaycell_vcro_4/gnd"
+merge "delaycell_vcro_4/gnd" "delaycell_vcro_3/gnd"
+merge "delaycell_vcro_3/gnd" "gnd"
+merge "gnd" "delaycell_vcro_1/gnd"
+merge "delaycell_vcro_1/gnd" "delaycell_vcro_2/gnd"
+merge "delaycell_vcro_2/out" "delaycell_vcro_3/in" -456.952 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14400 -620 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_3/in" "m1_3280_480#"
+merge "delaycell_vcro_4/vcn" "delaycell_vcro_3/vcn" -731.805 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1100 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_3/vcn" "delaycell_vcro_0/vcn"
+merge "delaycell_vcro_0/vcn" "delaycell_vcro_1/vcn"
+merge "delaycell_vcro_1/vcn" "delaycell_vcro_2/vcn"
+merge "delaycell_vcro_2/vcn" "vcon_n"
+merge "delaycell_vcro_1/out" "delaycell_vcro_2/in" -487.912 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -23500 -880 0 0 0 0 0 0 0 0 0 0
+merge "delaycell_vcro_2/in" "m1_2100_480#"

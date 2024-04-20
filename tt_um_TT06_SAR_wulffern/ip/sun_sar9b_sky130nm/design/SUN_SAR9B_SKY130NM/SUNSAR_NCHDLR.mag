@@ -1,0 +1,76 @@
+magic
+tech sky130A
+timestamp 1712959200
+<< checkpaint >>
+rect 0 0 720 176
+<< pwell >>
+rect -90 -66 630 242
+<< nmos >>
+rect 378 79 486 97
+<< ndiff >>
+rect 378 143 486 154
+rect 378 121 390 143
+rect 474 121 486 143
+rect 378 97 486 121
+rect 378 55 486 79
+rect 378 33 390 55
+rect 474 33 486 55
+rect 378 22 486 33
+<< ndiffc >>
+rect 390 121 474 143
+rect 390 33 474 55
+<< psubdiff >>
+rect -54 154 54 198
+rect -54 110 -18 154
+rect 18 110 54 154
+rect -54 66 54 110
+rect -54 22 -18 66
+rect 18 22 54 66
+rect -54 -22 54 22
+<< psubdiffcont >>
+rect -18 110 18 154
+rect -18 22 18 66
+<< poly >>
+rect 162 167 522 185
+rect 162 99 270 110
+rect 162 77 174 99
+rect 258 97 270 99
+rect 258 79 378 97
+rect 486 79 522 97
+rect 258 77 270 79
+rect 162 66 270 77
+rect 162 -9 522 9
+<< polycont >>
+rect 174 77 258 99
+<< locali >>
+rect -54 154 54 198
+rect -54 110 -18 154
+rect 18 110 54 154
+rect 378 143 486 149
+rect 378 121 390 143
+rect 474 121 486 143
+rect 378 115 486 121
+rect -54 66 54 110
+rect 162 99 270 105
+rect 162 77 174 99
+rect 258 77 270 99
+rect 162 71 270 77
+rect -54 22 -18 66
+rect 18 22 54 66
+rect 378 55 486 61
+rect 378 33 390 55
+rect 474 33 486 55
+rect 378 27 486 33
+rect -54 -22 54 22
+<< labels >>
+flabel locali s 162 71 270 105 0 FreeSans 400 0 0 0 G
+port 2 nsew signal bidirectional
+flabel locali s 378 27 486 61 0 FreeSans 400 0 0 0 S
+port 3 nsew signal bidirectional
+flabel locali s -54 66 54 110 0 FreeSans 400 0 0 0 B
+port 4 nsew signal bidirectional
+flabel locali s 378 115 486 149 0 FreeSans 400 0 0 0 D
+port 1 nsew signal bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 720 176
+<< end >>

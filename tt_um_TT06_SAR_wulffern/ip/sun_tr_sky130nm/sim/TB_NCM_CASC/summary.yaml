@@ -1,0 +1,19 @@
+description: TB_NCM
+simulations:
+   dc:
+    name: Current mirror stability
+    description: |
+      Check variation in current mirror for a VDS=0.2 V and 1 uA
+    data:
+      - name: Sch_typ
+        src: results/dc_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/dc_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/dc_Sch_mc
+        method: 3std
+      - name: Sch_std
+        src: results/dc_Sch_mc
+        method: std

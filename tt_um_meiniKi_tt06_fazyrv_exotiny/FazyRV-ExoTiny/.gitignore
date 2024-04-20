@@ -1,0 +1,11 @@
+.venv
+work*
+build
+riscof_work
+*.vcd
+*.fst
+fusesoc.conf
+
+__pycache__/
+*.py[cod]
+.vscode

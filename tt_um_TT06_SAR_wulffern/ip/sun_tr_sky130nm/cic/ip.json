@@ -1,0 +1,18 @@
+{
+	"options" :
+	{
+		"ignoreSetYoffsetHalf" : false,
+		"prefix" : "SUNTR_"
+	},
+	"include" : [
+		"dmos_sky130nm_core.json",
+		"dcap.json",
+		"tr.json",
+		"resistors.json",
+		"dig.json",
+		"components.json",
+		"capacitor.json"
+
+	],
+    "cells" : []
+}

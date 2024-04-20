@@ -1,0 +1,61 @@
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/vcro_5elements.sch
+**.subckt vcro_5elements out vdd vcon_p vcon_n gnd
+*.ipin vdd
+*.ipin vcon_p
+*.ipin vcon_n
+*.ipin gnd
+*.opin out
+x1 vdd vcon_p net1 out vcon_n gnd delaycell_vcro
+x2 vdd vcon_p net2 net1 vcon_n gnd delaycell_vcro
+x3 vdd vcon_p net3 net2 vcon_n gnd delaycell_vcro
+x4 vdd vcon_p net4 net3 vcon_n gnd delaycell_vcro
+x5 vdd vcon_p out net4 vcon_n gnd delaycell_vcro
+**.ends
+
+* expanding   symbol:  delaycell_vcro.sym # of pins=6
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/delaycell_vcro.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/delaycell_vcro.sch
+.subckt delaycell_vcro vdd vcp out in vcn gnd
+*.ipin vdd
+*.ipin vcp
+*.ipin in
+*.ipin vcn
+*.ipin gnd
+*.opin out
+x9 vdd net1 out gnd inv
+x10 vdd vcp net1 in vcn gnd tg
+.ends
+
+
+* expanding   symbol:  inv.sym # of pins=4
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/inv.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/inv.sch
+.subckt inv vdd in out gnd
+*.ipin in
+*.ipin vdd
+*.ipin gnd
+*.opin out
+XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tg.sym # of pins=6
+** sym_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/tg.sym
+** sch_path: /home/irfansyah/design/irfan/tt06-analog-its_ip_alits01/xschem/tg.sch
+.subckt tg vdd vcon_p out in vcon_n gnd
+*.ipin vcon_p
+*.ipin vdd
+*.ipin vcon_n
+*.ipin gnd
+*.ipin in
+*.opin out
+XM1 out vcon_p in vdd sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 in vcon_n out gnd sky130_fd_pr__nfet_01v8 L=1 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

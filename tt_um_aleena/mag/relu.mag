@@ -1,0 +1,88 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1713531841
+<< nwell >>
+rect -756 746 -648 800
+rect -756 738 -646 746
+rect -756 538 -600 738
+rect -756 534 -646 538
+rect -756 476 -648 534
+<< ndiff >>
+rect -378 206 -348 406
+<< pdiff >>
+rect -646 538 -612 738
+<< psubdiff >>
+rect -348 382 -290 406
+rect -348 230 -336 382
+rect -302 230 -290 382
+rect -348 206 -290 230
+<< nsubdiff >>
+rect -720 724 -646 738
+rect -720 550 -696 724
+rect -658 550 -646 724
+rect -720 538 -646 550
+<< psubdiffcont >>
+rect -336 230 -302 382
+<< nsubdiffcont >>
+rect -696 550 -658 724
+<< poly >>
+rect -482 864 -414 880
+rect -482 826 -466 864
+rect -430 826 -414 864
+rect -482 810 -414 826
+rect -466 764 -436 810
+rect -554 432 -524 512
+rect -466 432 -436 512
+rect -554 120 -524 180
+rect -574 104 -504 120
+rect -574 64 -558 104
+rect -520 64 -504 104
+rect -574 48 -504 64
+<< polycont >>
+rect -466 826 -430 864
+rect -558 64 -520 104
+<< locali >>
+rect -482 864 -414 880
+rect -482 860 -466 864
+rect -600 826 -466 860
+rect -430 826 -414 864
+rect -600 742 -566 826
+rect -482 810 -414 826
+rect -720 724 -600 738
+rect -720 550 -696 724
+rect -658 550 -600 724
+rect -720 538 -600 550
+rect -600 410 -566 534
+rect -424 410 -390 534
+rect -390 382 -290 406
+rect -390 230 -336 382
+rect -302 230 -290 382
+rect -390 206 -290 230
+rect -574 104 -504 120
+rect -574 64 -558 104
+rect -520 100 -504 104
+rect -424 100 -390 202
+rect -520 66 -390 100
+rect -520 64 -504 66
+rect -574 48 -504 64
+<< metal1 >>
+rect -518 468 -472 538
+rect -518 440 -286 468
+use sky130_fd_pr__nfet_01v8_J2TWZ5  XM2 ~/Desktop/tinytapeoutsig/mag/sig
+timestamp 1713531841
+transform 1 0 -539 0 1 306
+box -73 -126 73 126
+use sky130_fd_pr__pfet_01v8_5U3NDE  XM4 ~/Desktop/tinytapeoutsig/mag/sig
+timestamp 1713531841
+transform 1 0 -451 0 1 638
+box -109 -162 109 162
+use sky130_fd_pr__nfet_01v8_J2TWZ5  sky130_fd_pr__nfet_01v8_J2TWZ5_0
+timestamp 1713531841
+transform 1 0 -451 0 1 306
+box -73 -126 73 126
+use sky130_fd_pr__pfet_01v8_5U3NDE  sky130_fd_pr__pfet_01v8_5U3NDE_0
+timestamp 1713531841
+transform 1 0 -539 0 1 638
+box -109 -162 109 162
+<< end >>

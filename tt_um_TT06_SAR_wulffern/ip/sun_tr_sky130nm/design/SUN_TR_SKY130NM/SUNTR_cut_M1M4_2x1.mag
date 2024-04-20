@@ -1,0 +1,46 @@
+magic
+tech sky130A
+timestamp 1711839600
+<< checkpaint >>
+rect 0 0 100 38
+<< locali >>
+rect 0 31 92 34
+rect 0 3 6 31
+rect 34 3 58 31
+rect 86 3 92 31
+rect 0 0 92 3
+<< viali >>
+rect 6 3 34 31
+rect 58 3 86 31
+<< metal1 >>
+rect 0 31 92 34
+rect 0 3 6 31
+rect 34 3 58 31
+rect 86 3 92 31
+rect 0 0 92 3
+<< via1 >>
+rect 6 3 34 31
+rect 58 3 86 31
+<< metal2 >>
+rect 0 35 100 38
+rect 0 3 6 35
+rect 38 31 62 35
+rect 38 3 58 31
+rect 94 3 100 35
+rect 0 0 100 3
+<< via2 >>
+rect 6 31 38 35
+rect 62 31 94 35
+rect 6 3 34 31
+rect 34 3 38 31
+rect 62 3 86 31
+rect 86 3 94 31
+<< metal3 >>
+rect 0 35 100 38
+rect 0 3 6 35
+rect 38 3 62 35
+rect 94 3 100 35
+rect 0 0 100 3
+<< properties >>
+string FIXED_BBOX 0 0 100 38
+<< end >>

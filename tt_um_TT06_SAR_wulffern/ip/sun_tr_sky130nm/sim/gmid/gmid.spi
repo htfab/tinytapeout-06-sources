@@ -1,0 +1,66 @@
+* gm/Id simulation
+
+.param ll=0.26 vg=1 vd=0.2 vdd=1.8
+.option TNOM=27
+
+vg vg 0 vg
+vdn dn 0 'vd'
+vdp dp 0 '-vd'
+egn gn 0 vg 0 1
+egp gp 0 vg 0 -1
+
+xmn dn gn 0 0 sky130_fd_pr__nfet_01v8 w=1.08 l=ll
+xmp dp gp 0 0 sky130_fd_pr__pfet_01v8 w=1.08 l=ll
+
+.probe dc v(*) i(*)
+.control
+set filetype binary
+
+save all
++ @m.xmn.msky130_fd_pr__nfet_01v8[gm]
++ @m.xmn.msky130_fd_pr__nfet_01v8[vth]
++ @m.xmn.msky130_fd_pr__nfet_01v8[vdsat]
++ @m.xmn.msky130_fd_pr__nfet_01v8[id]
++ @m.xmn.msky130_fd_pr__nfet_01v8[cgs]
++ @m.xmn.msky130_fd_pr__nfet_01v8[cgg]
++ @m.xmn.msky130_fd_pr__nfet_01v8[cgd]
++ @m.xmn.msky130_fd_pr__nfet_01v8[gds]
++ @m.xmn.msky130_fd_pr__nfet_01v8[w]
++ @m.xmn.msky130_fd_pr__nfet_01v8[l]
++ @m.xmp.msky130_fd_pr__pfet_01v8[gm]
++ @m.xmp.msky130_fd_pr__pfet_01v8[id]
++ @m.xmp.msky130_fd_pr__pfet_01v8[vth]
++ @m.xmp.msky130_fd_pr__pfet_01v8[vdsat]
++ @m.xmp.msky130_fd_pr__pfet_01v8[cgs]
++ @m.xmp.msky130_fd_pr__pfet_01v8[cgg]
++ @m.xmp.msky130_fd_pr__pfet_01v8[cgd]
++ @m.xmp.msky130_fd_pr__pfet_01v8[gds]
++ @m.xmp.msky130_fd_pr__pfet_01v8[w]
++ @m.xmp.msky130_fd_pr__pfet_01v8[l]
+
+
+foreach tx_len 0.18 0.36
+*alter ll=$tx_len
+alter @m.xmn.msky130_fd_pr__nfet_01v8 l=0.18u
+*alterp @m.xmn.msky130_fd_pr__nfet_01v8[l]
+dc vg 0.2 1.8 0.01
+let id = @m.xmn.msky130_fd_pr__nfet_01v8[id]
+let wl = (@m.xmn.msky130_fd_pr__nfet_01v8[w]/@m.xmn.msky130_fd_pr__nfet_01v8[l])
+let ut = 1/(boltz/echarge*(27 - kelvin))
+let gm = @m.xmn.msky130_fd_pr__nfet_01v8[gm]
+let gmid = gm/id
+let gds = @m.xmn.msky130_fd_pr__nfet_01v8[gds]
+let gmgds = gm/gds
+let gmgdsdB = 20*log10(gmgds)
+let ngmid = gmid/ut
+let idgm = 1/gmid
+let didgm = deriv(idgm)
+print $tx_len
+print wl
+write {cicname}.raw
+set appendwrite
+end
+quit
+.endc
+
+.end

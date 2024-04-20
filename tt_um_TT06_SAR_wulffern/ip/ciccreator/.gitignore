@@ -1,0 +1,48 @@
+*#
+*~
+.#*
+.vscode
+bin
+version.h
+*.autosave
+lay
+build
+moc_*
+qmake.make
+*.o
+.DS_Store
+.qmake.*
+*.svg
+*.pro.user.*
+*.pro.user
+Makefile
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+doxygen

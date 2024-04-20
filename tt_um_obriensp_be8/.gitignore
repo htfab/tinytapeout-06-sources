@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.vscode
+*.vcd
+/build
+/runs
+tt_submission
+src/user_config.tcl
+/tt/
+.venv/
+__pycache__/

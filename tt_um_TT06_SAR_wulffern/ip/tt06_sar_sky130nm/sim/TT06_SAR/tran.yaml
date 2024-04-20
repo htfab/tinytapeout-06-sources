@@ -1,0 +1,91 @@
+maxfreq:
+  src:
+    - maxfreq_MHz
+  typ: 8
+  name: Maximum operating frequency
+  min: 4
+  max: 20
+  scale: 1
+  digits: 2
+  unit: MHz
+sndr:
+  src:
+    - SNDR
+  typ: 45
+  name: Signal to noise and distortion ratio
+  min: 38
+  max: 50
+  scale: 1
+  digits: 1
+  unit: dB
+sndrfs:
+  src:
+    - SNDR_FS
+  typ: 45
+  name: Signal to noise and distortion ratio (FS)
+  min: 42
+  max: 50
+  scale: 1
+  digits: 1
+  unit: dB
+sfdr:
+  src:
+    - SFDR
+  typ: 50
+  name: Spurious free dynamic range
+  min: 40
+  max: 70
+  scale: 1
+  digits: 1
+  unit: dBc
+enob:
+  src:
+    - ENOB
+  typ: 7
+  name: Effective number of bits
+  min: 6.1
+  max: 7.99
+  scale: 1
+  digits: 2
+  unit: bits
+enobfs:
+  src:
+    - ENOB_FS
+  typ: 7
+  name: Effective number of bits (FS)
+  min: 6.8
+  max: 7.99
+  scale: 1
+  digits: 2
+  unit: bits
+idd:
+  src:
+    - iavdd
+  typ: 50
+  name: Active current
+  min: 30
+  max: 70
+  scale: -1e6
+  digits: 1
+  unit: uA
+amp:
+  src:
+    - AMP
+  typ: -3
+  name: FFT input amplitude
+  min: -6
+  max: -0.2
+  scale: 1
+  digits: 2
+  unit: dB
+
+fom:
+  src:
+    - FOM_FS
+  typ: 100
+  name: Walden FOM
+  min: 50
+  max: 200
+  scale: 1e15
+  digits: 2
+  unit: fJ/step

@@ -1,0 +1,69 @@
+| units: 500000 tech: sky130A format: MIT
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1374 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VSS VOUT VSS s=5800,258 d=11600,516 l=400 w=200 x=5732 y=432 sky130_fd_pr__nfet_01v8
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=-521 sky130_fd_pr__pfet_01v8_lvt
+x V2 VDD V1 VDD s=5800,258 d=5800,258 l=400 w=200 x=3947 y=1408 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1690 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VSS VOUT VSS s=5800,258 d=5800,258 l=400 w=200 x=5732 y=-483 sky130_fd_pr__nfet_01v8
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=-363 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VOUT VSS VSS s=5800,258 d=5800,258 l=400 w=200 x=5732 y=-941 sky130_fd_pr__nfet_01v8
+x V2 V1 VDD VDD s=5800,258 d=11600,516 l=400 w=200 x=3947 y=1866 sky130_fd_pr__pfet_01v8_lvt
+x V2 V2 VDD VDD s=5800,258 d=5800,258 l=400 w=200 x=3415 y=950 sky130_fd_pr__pfet_01v8_lvt
+x V2 VDD V2 VDD s=5800,258 d=5800,258 l=400 w=200 x=3415 y=492 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VOUT VSS VSS s=5800,258 d=5800,258 l=400 w=200 x=5732 y=-25 sky130_fd_pr__nfet_01v8
+x V2 VDD V2 VDD s=11600,516 d=5800,258 l=400 w=200 x=3415 y=-423 sky130_fd_pr__pfet_01v8_lvt
+x V2 V1 VDD VDD s=5800,258 d=5800,258 l=400 w=200 x=3947 y=950 sky130_fd_pr__pfet_01v8_lvt
+x V2 VDD V1 VDD s=5800,258 d=5800,258 l=400 w=200 x=3947 y=492 sky130_fd_pr__pfet_01v8_lvt
+x V2 V2 VDD VDD s=5800,258 d=5800,258 l=400 w=200 x=3415 y=34 sky130_fd_pr__pfet_01v8_lvt
+x MINUS a_2586_n2492# V2 VSS s=29000,1116 d=29000,1116 l=100 w=500 x=3534 y=-1403 sky130_fd_pr__nfet_01v8_lvt
+x VBIAS VSS VOUT VSS s=5800,258 d=5800,258 l=400 w=200 x=5732 y=-1399 sky130_fd_pr__nfet_01v8
+x VBIAS VOUT VSS VSS s=5800,258 d=5800,258 l=400 w=200 x=5732 y=-1857 sky130_fd_pr__nfet_01v8
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=-47 sky130_fd_pr__pfet_01v8_lvt
+x PLUS a_2586_n2492# V1 VSS s=29000,1116 d=29000,1116 l=100 w=500 x=3920 y=-1403 sky130_fd_pr__nfet_01v8_lvt
+x VBIAS a_2586_n2492# VSS VSS s=5800,258 d=11600,516 l=400 w=200 x=3560 y=-2491 sky130_fd_pr__nfet_01v8
+x V2 VDD V2 VDD s=5800,258 d=5800,258 l=400 w=200 x=3415 y=1408 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VSS VOUT VSS s=11600,516 d=5800,258 l=400 w=200 x=5732 y=-2315 sky130_fd_pr__nfet_01v8
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=2006 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1848 sky130_fd_pr__pfet_01v8_lvt
+x V2 V1 VDD VDD s=5800,258 d=5800,258 l=400 w=200 x=3947 y=34 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS VSS a_2586_n2492# VSS s=11600,516 d=5800,258 l=400 w=200 x=2186 y=-2491 sky130_fd_pr__nfet_01v8
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=426 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=900 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1216 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=268 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=11600,516 d=5800,258 l=100 w=200 x=6769 y=-837 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=742 sky130_fd_pr__pfet_01v8_lvt
+x VBIAS a_2586_n2492# VSS VSS s=5800,258 d=5800,258 l=400 w=200 x=2644 y=-2491 sky130_fd_pr__nfet_01v8
+x VBIAS VSS a_2586_n2492# VSS s=5800,258 d=5800,258 l=400 w=200 x=3102 y=-2491 sky130_fd_pr__nfet_01v8
+x V1 VDD VOUT VDD s=5800,258 d=11600,516 l=100 w=200 x=6769 y=2164 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1058 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=-679 sky130_fd_pr__pfet_01v8_lvt
+x V2 VDD V1 VDD s=11600,516 d=5800,258 l=400 w=200 x=3947 y=-423 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=1532 sky130_fd_pr__pfet_01v8_lvt
+x V1 VDD VOUT VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=584 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=-205 sky130_fd_pr__pfet_01v8_lvt
+x V2 V2 VDD VDD s=5800,258 d=11600,516 l=400 w=200 x=3415 y=1866 sky130_fd_pr__pfet_01v8_lvt
+x V1 VOUT VDD VDD s=5800,258 d=5800,258 l=100 w=200 x=6769 y=110 sky130_fd_pr__pfet_01v8_lvt
+C V1 VDD 11.4
+C V2 VDD 13.6
+C V1 VOUT 2.0
+C VBIAS VOUT 2.1
+C VOUT VDD 7.6
+C VOUT0 4.7
+R VOUT 16128
+C VBIAS0 21.3
+R VBIAS 5923
+C PLUS0 2.4
+R PLUS 438
+C MINUS0 2.3
+R MINUS 438
+C VDD0 39.1
+R VDD 96062
+R VSS 93414
+= VSS VX
+C a_2586_n2492#0 2.3
+R a_2586_n2492# 4317
+C V10 3.3
+R V1 13122
+C V20 4.8
+R V2 11017

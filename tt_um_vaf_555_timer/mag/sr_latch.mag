@@ -1,0 +1,64 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1711842990
+<< metal1 >>
+rect -5951 1370 -5333 1404
+rect -6020 811 -5986 845
+rect -5918 802 -5908 854
+rect -5856 802 -5846 854
+rect -5340 802 -5330 854
+rect -5278 802 -5268 854
+rect -6020 705 -5986 739
+rect -5662 696 -5652 748
+rect -5600 696 -5590 748
+rect -5784 478 -5774 530
+rect -5722 478 -5712 530
+rect -5959 360 -5333 394
+<< via1 >>
+rect -5908 802 -5856 854
+rect -5330 802 -5278 854
+rect -5652 696 -5600 748
+rect -5774 478 -5722 530
+<< metal2 >>
+rect -5908 854 -5856 864
+rect -5330 854 -5278 864
+rect -5856 811 -5330 845
+rect -5908 792 -5856 802
+rect -5278 845 -5268 854
+rect -5278 811 -5267 845
+rect -5278 802 -5268 811
+rect -5330 792 -5278 802
+rect -5652 748 -5600 758
+rect -5652 686 -5600 696
+rect -6020 658 -5968 667
+rect -5643 658 -5609 686
+rect -6020 624 -5609 658
+rect -6020 615 -5968 624
+rect -5774 530 -5722 540
+rect -5320 520 -5268 530
+rect -5722 486 -5268 520
+rect -5320 478 -5268 486
+rect -5774 468 -5722 478
+use nor  X_NOR_BOTTOM
+timestamp 1711842654
+transform 1 0 -4445 0 1 -180
+box -1199 534 -823 1620
+use nor  X_NOR_TOP
+timestamp 1711842654
+transform 1 0 -4821 0 1 -180
+box -1199 534 -823 1620
+<< labels >>
+flabel metal2 -6020 615 -5968 667 3 FreeSans 320 0 0 0 IN_R
+port 1 e default input
+flabel metal1 -6020 705 -5986 739 3 FreeSans 320 0 0 0 IN_S
+port 0 e default input
+flabel metal2 -5320 802 -5268 854 7 FreeSans 320 0 0 0 OUT_Q
+port 2 w default output
+flabel metal2 -5320 478 -5268 530 7 FreeSans 320 0 0 0 OUT_Q_B
+port 3 w default output
+flabel metal1 -5959 360 -5337 394 0 FreeSans 320 0 0 0 vss
+port 5 nsew default bidirectional
+flabel metal1 -5951 1370 -5337 1404 0 FreeSans 320 0 0 0 vdd
+port 4 nsew default bidirectional
+<< end >>

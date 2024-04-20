@@ -1,0 +1,4 @@
+[submodule "release"]
+	path = release
+	url = https://github.com/wulffern/ciccreator-bin
+	branch = main

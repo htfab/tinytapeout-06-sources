@@ -1,0 +1,6 @@
+[submodule "tt-support-tools"]
+	path = tt-support-tools
+	url = git@github.com:TinyTapeout/tt-support-tools.git
+[submodule "test/vcd2json"]
+	path = test/vcd2json
+	url = https://github.com/nanamake/vcd2json.git

@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: wulffern/cic_qt:latest
+      options: --user root
+    steps:
+    - name: ciccreator
+      uses: actions/checkout@v2
+    - name: Compile
+      run: |
+        pip install cicpy
+        make compile
+        make test

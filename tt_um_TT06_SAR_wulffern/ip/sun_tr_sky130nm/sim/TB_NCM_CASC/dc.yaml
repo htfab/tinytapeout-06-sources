@@ -1,0 +1,37 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+t_1:
+  src:
+    - t25_i_dlcm_1
+    - t25_i_dlcm_4
+    - tn40_i_dlcm_1
+    - tn40_i_dlcm_4
+    - t125_i_dlcm_1
+    - t125_i_dlcm_4
+    - t25_i_dlcm2_1
+    - t25_i_dlcm2_4
+    - tn40_i_dlcm2_1
+    - tn40_i_dlcm2_4
+    - t125_i_dlcm2_1
+    - t125_i_dlcm2_4
+    - t25_i_lcm_1
+    - t25_i_lcm_4
+    - tn40_i_lcm_1
+    - tn40_i_lcm_4
+    - t125_i_lcm_1
+    - t125_i_lcm_4
+  min: -5%
+  typ: 1
+  max: 5%
+  scale: 1e6
+  digits: 3
+  unit: nA

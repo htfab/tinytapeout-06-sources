@@ -1,0 +1,56 @@
+timestamp 1713516147
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use tg_vcro tg_vcro_0 1 0 190 0 1 200
+use inv_vcro inv_vcro_0 1 0 720 0 1 200
+port "gnd" 5 -10 90 40 100 m1
+port "vcn" 4 30 410 80 420 m1
+port "out" 2 1050 500 1100 510 m1
+port "in" 3 50 530 100 540 m1
+port "vcp" 1 30 640 80 650 m1
+port "vdd" 0 -10 1270 40 1280 m1
+node "gnd" 0 70.8035 -10 90 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8100 360 0 0 0 0 0 0 0 0 0 0
+node "vcn" 0 56.7992 30 410 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8800 380 0 0 0 0 0 0 0 0 0 0
+node "out" 0 94.5193 1050 500 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14400 480 0 0 0 0 0 0 0 0 0 0
+node "m1_520_500#" 0 62.6734 520 500 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8400 380 0 0 0 0 0 0 0 0 0 0
+node "in" 0 45.1865 50 530 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9100 400 0 0 0 0 0 0 0 0 0 0
+node "vcp" 0 60.2085 30 640 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8800 380 0 0 0 0 0 0 0 0 0 0
+node "vdd" 0 64.9387 -10 1270 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6300 320 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vcn" "gnd" 6.11111
+cap "vcn" "vcp" 4.4
+cap "in" "vcp" 44
+cap "in" "vcn" 44
+cap "vdd" "gnd" 1.44262
+cap "vdd" "vcp" 2.2
+cap "m1_520_500#" "out" 12
+cap "in" "m1_520_500#" 7.89744
+cap "tg_vcro_0/gnd" "tg_vcro_0/out" 28.9617
+cap "inv_vcro_0/out" "tg_vcro_0/out" -7.07722
+cap "tg_vcro_0/vcon_p" "tg_vcro_0/vcon_n" -4.4
+cap "tg_vcro_0/vcon_p" "tg_vcro_0/vdd" 1.69143
+cap "tg_vcro_0/in" "tg_vcro_0/vcon_p" -44
+cap "tg_vcro_0/out" "tg_vcro_0/vcon_p" 5.76853
+cap "tg_vcro_0/in" "tg_vcro_0/vcon_n" -44
+cap "tg_vcro_0/out" "tg_vcro_0/vcon_n" 5.76853
+cap "tg_vcro_0/out" "tg_vcro_0/vdd" 58.825
+cap "inv_vcro_0/out" "tg_vcro_0/vcon_p" 0.0884219
+cap "tg_vcro_0/in" "tg_vcro_0/out" -7.24572
+cap "inv_vcro_0/out" "tg_vcro_0/vcon_n" 0.0884219
+cap "tg_vcro_0/gnd" "tg_vcro_0/vcon_n" -5.5019
+cap "tg_vcro_0/gnd" "tg_vcro_0/vdd" -6.1458
+cap "inv_vcro_0/out" "tg_vcro_0/vdd" 0.657291
+merge "inv_vcro_0/gnd" "tg_vcro_0/gnd" -171.912 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -140 -8100 -540 0 0 0 0 0 0 0 0 0 0
+merge "tg_vcro_0/gnd" "VSUBS"
+merge "VSUBS" "gnd"
+merge "tg_vcro_0/vcon_p" "vcp" -69.9265 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8800 -380 0 0 0 0 0 0 0 0 0 0
+merge "tg_vcro_0/vcon_n" "vcn" -63.235 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8800 -380 0 0 0 0 0 0 0 0 0 0
+merge "tg_vcro_0/in" "in" -45.1865 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9100 -400 0 0 0 0 0 0 0 0 0 0
+merge "inv_vcro_0/in" "tg_vcro_0/out" -230.289 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -380 0 0 0 0 0 0 0 0 0 0
+merge "tg_vcro_0/out" "m1_520_500#"
+merge "inv_vcro_0/out" "out" -101.709 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14400 -480 0 0 0 0 0 0 0 0 0 0
+merge "inv_vcro_0/vdd" "tg_vcro_0/vdd" -205.4 0 0 0 0 0 -1060 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -140 -6300 -500 0 0 0 0 0 0 0 0 0 0
+merge "tg_vcro_0/vdd" "vdd"
