@@ -25,10 +25,13 @@ module tt_um_wokwi_395514572866576385(
   wire net11;
   wire net12 = 1'b0;
   wire net13 = 1'b1;
-  wire net14;
-  wire net15;
-  wire net16;
+  wire net14 = 1'b1;
+  wire net15 = 1'b0;
+  wire net16 = 1'b1;
   wire net17;
+  wire net18;
+  wire net19;
+  wire net20;
 
   assign uo_out[0] = net1;
   assign uo_out[1] = net9;
@@ -63,31 +66,31 @@ module tt_um_wokwi_395514572866576385(
   xor_cell xor2 (
     .a (net3),
     .b (net7),
-    .out (net14)
+    .out (net17)
   );
   xor_cell xor3 (
     .a (net9),
-    .b (net14),
+    .b (net17),
     .out (net10)
   );
   xor_cell xor4 (
     .a (net2),
     .b (net4),
-    .out (net15)
+    .out (net18)
   );
   xor_cell xor5 (
     .a (net6),
     .b (net8),
-    .out (net16)
+    .out (net19)
   );
   xor_cell xor6 (
-    .a (net15),
-    .b (net16),
-    .out (net17)
+    .a (net18),
+    .b (net19),
+    .out (net20)
   );
   xor_cell xor7 (
     .a (net10),
-    .b (net17),
+    .b (net20),
     .out (net11)
   );
 endmodule
