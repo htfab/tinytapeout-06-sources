@@ -261,6 +261,10 @@ jobs:
               -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME \
               /bin/bash -c "./flow.tcl -overwrite -design /work/src -run_path /work/runs -tag wokwi"
 
+          echo "----- BEGIN LINTER LOG FOR ${{ matrix.project }} ----"
+          cat runs/wokwi/logs/synthesis/linter.log
+          echo "----- END LINTER LOG -----"
+
           if ! grep -q "\[SUCCESS\]: Flow complete." runs/wokwi/openlane.log; then
             exit 1
           fi
